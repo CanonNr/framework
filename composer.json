@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Canon\\framework\\": "src/"
+            "Canon\\Framework\\": "src/"
         },
         "files": [
             "src/helpers.php"
