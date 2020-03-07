@@ -2,6 +2,7 @@
 namespace Canon\Framework;
 
 use Illuminate\Container\Container;
+use Canon\Framework\Routing\Router;
 
 class Application extends Container
 {
@@ -11,12 +12,23 @@ class Application extends Container
      */
     private $version = "开发中";
 
+    /**
+     * @var 
+     */
+    public $router;
 
     public function __construct()
     {
-        $container = Container::getInstance();
-        $container->bind(Animal::class);
+        static::setInstance($this);
+        $this->instance('app', $this);
+        $this->instance(self::class, $this);
+        
+        $this->bootstrapRouter();
+    }
 
+    public function bootstrapRouter()
+    {
+        $this->router = new Router($this);
     }
 
     /**
