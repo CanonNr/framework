@@ -1,0 +1,26 @@
+{
+    "name": "CanonNr/framework",
+    "description": "simple php framework",
+    "keywords": ["php", "framework", "swoole","laravel","rpc"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Canon",
+            "email": "sunyanran1014@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1",
+    },
+    "autoload": {
+        "psr-4": {
+            "Canon\\framework\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "prefer-stable": true
+}
