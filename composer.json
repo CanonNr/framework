@@ -1,5 +1,5 @@
 {
-    "name": "CanonNr/framework",
+    "name": "canon-nr/framework",
     "description": "simple php framework",
     "keywords": ["php", "framework", "swoole","laravel","rpc"],
     "type": "library",
